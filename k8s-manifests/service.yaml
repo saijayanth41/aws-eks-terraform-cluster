@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: demo-web-svc
+spec:
+  type: LoadBalancer
+  selector: { app: demo-web }
+  ports:
+    - port: 80
+      targetPort: 80
